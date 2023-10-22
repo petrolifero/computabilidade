@@ -1,0 +1,142 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{enumitem}
+
+\begin{document}
+	
+	\title{Respostas da Lista de Exercícios}
+	\author{João Pedro Abreu de Souza}
+	\date{\today}
+	\maketitle
+	
+	\section{Respostas}
+	
+	\subsection{Questão 1}
+	
+	\subsubsection{1.8.1}
+	(((a*a)b)Ub) = (((a*a)b)U(b)) = (((a*a)b)U(eb)) = ((((a*a))U(e))b) = (a*)b = "linguagem das palavras que são uma sequencia de a's terminadas por b"
+	\subsubsection{1.8.2}
+	\begin{enumerate}[label=(\alph*)]
+		\item $\emptyset$*Ua*Ub*U(aUb)* = eUa*Ub*U(aUb)* = eUa*Ub*U(a*b*)* = (a*b*)* = (aUb)*
+		\item ((a*b*)*(b*a*)*)* = ((aUb)*(b*a*)*)* = ((aUb)*(bUa)*)* = ((aUb)*(aUb)*)* = ((aUb)*)* = (aUb)*
+		\item (a*b)*U(b*a)* = (aUb)*
+		\item (aUb)*a(aUb)* = b*a(aUb)*
+	\end{enumerate}
+	\subsubsection{1.8.3}
+	\begin{enumerate}[label=(\alph*)]
+		\item b*Ub*ab*Ub*ab*ab*Ub*ab*ab*ab*
+		\item b*(ab*ab*ab*)*
+		\item (eUabb*Uaabb*Ub)*aaa((bUbab*Ubaab*)*U(baUbaa))
+	\end{enumerate}
+	\subsubsection{1.8.5}
+		\begin{enumerate}[label=(\alph*)]
+		\item baa pode ser obtido ao capturar a palavra vazia no primeiro a*, b no b* seguinte, aa no a* seguinte e por fim, a palavra vazia no ultimo b*
+		\item Dividamos a prova nas duas continências
+			\begin{itemize}
+				\item b*a* $\cap$ a*b* $\subseteq$ a* U b*
+					Tomemos uma palavra pertencente a b*a* $\cap$ a*b*. Esta pode ser vazia ou não-vazia. Sendo vazia, pertence a a*, logo pertence a a*U b*. Sendo não-vazia, sua primeira letra poderá ser a ou b. Sendo a, b*a* exige que seja composta apenas de a's, logo pertencente a a*. Da mesma forma, sendo a primeira letra b, a*b* exige que seja composta apenas de b's, logo pertence a b*. Em ambos os casos, pertencente a a* U b*
+				\item b*a* $\cap$ a*b* $\supseteq$ a* U b*
+				Tomemos uma palavra pertencente a a* U b*. Temos duas possibilidades : ou ela pertence a a* ou a b*. Suponha que seja de a*. logo é composta apenas por a's, logo pertence a b*a*, cabendo apenas reconhecer a palavra vazia em b* e a palavra inteira em a*, e também a*b*, cabendo apenas reconhecer a palavra inteira em a* e a vazia em b*. Logo pertence a sua intersecção. Pertencendo a b*, é composta apenas por b's, logo pertence a b*a*, cabendo apenas reconhecer a palavra inteira em b* e a vazia em a*, e também a*b*, cabendo apenas reconhecer a palavra vazia em a* e a palavra inteira em b*, logo pertencendo a sua intersecção.
+			\end{itemize}
+		\item Falso pois a palavra vazia pertence a a*b*$\cap$b*c*
+		\item Falso pois para ter c na palavra é necessário que antes do c venha um a ou d, não b.
+	\end{enumerate}
+	
+	\subsection{Questão 2}
+	\subsubsection{expressão regular}
+	0*100*10*10*U0*100*10*
+	\subsubsection{AFD}
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		& 0 & 1 \\
+		\hline
+		\{S\} & \{q2\} & qt \\
+		q1 & 5 & 6 \\
+		\hline
+	\end{tabular}
+	\caption{AFD}
+\end{table}
+	\subsubsection{AFND}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& 0 & 1 \\
+			\hline
+			\{S\} & \{q2\} & qt \\
+			q1 & 5 & 6 \\
+			\hline
+		\end{tabular}
+		\caption{AFD}
+	\end{table}
+	\subsubsection{gramática regular}
+	S $\rightarrow$ a A \\
+	S $\rightarrow$ b B \\
+	A $\rightarrow$ a C \\
+	A $\rightarrow$ a \\
+	A $\rightarrow$ b B \\
+	B $\rightarrow$ a A \\
+	B $\rightarrow$ b C \\
+	B $\rightarrow$ b \\
+	C $\rightarrow$ a C \\
+	C $\rightarrow$ a \\
+	C $\rightarrow$ b C \\
+	C $\rightarrow$ b \\
+	\subsection{Questão 3}	
+	\subsubsection{2.1.2}
+	\begin{itemize}
+		\item 	Palavras que começam com a, seguida de uma sequência de ba
+		\item Palavras que começam com uma sequência de a's, seguida de b
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{itemize}
+
+	\subsubsection{2.1.3}
+	\subsubsection{2.2.2}
+	\subsubsection{2.2.3}
+	\subsubsection{2.2.9}
+	\subsubsection{2.2.10}
+	\subsubsection{2.3.1}
+	\subsubsection{2.3.4}
+
+	\subsection{Questão 4}
+	
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			  & 0 & 1 \\
+			\hline
+			\{S\} & \{q2\} & qt \\
+			q1 & 5 & 6 \\
+			\hline
+		\end{tabular}
+		\caption{AFD}
+	\end{table}
+	
+	\subsection{Questão 5}
+	
+	S $\rightarrow$ a A \\
+	S $\rightarrow$ b B \\
+	A $\rightarrow$ a C \\
+	A $\rightarrow$ a \\
+	A $\rightarrow$ b B \\
+	B $\rightarrow$ a A \\
+	B $\rightarrow$ b C \\
+	B $\rightarrow$ b \\
+	C $\rightarrow$ a C \\
+	C $\rightarrow$ a \\
+	C $\rightarrow$ b C \\
+	C $\rightarrow$ b \\
+	
+	
+
+	
+\end{document}
